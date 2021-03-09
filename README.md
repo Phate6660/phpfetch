@@ -13,7 +13,6 @@ An info fetch tool written in PHP. Because why not. /shrug
 ![screenshot](screenshot.png?raw=true)
 
 ## TODO
-- Make `filesize()` work with `/proc` files
 - Support BSD
 - Support more package counts:
   + dnf

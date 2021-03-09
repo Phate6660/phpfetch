@@ -66,14 +66,10 @@ Yb,  88      `8bYb, `88       88 Yb,  88      `8b IP'`Yb             I8         
     $editor = getenv("EDITOR");
     
     /* Hostname */
-    $hostname_file = fopen("/etc/hostname", "r");
-    $hostname = fread($hostname_file, filesize("/etc/hostname"));
-    fclose($hostname_file);
+    $hostname = file_get_contents("/etc/hostname", "r");
     
     /* Kernel */
-    $kernel_file = fopen("/proc/sys/kernel/osrelease", "r");
-    $kernel = fread($kernel_file, 18);
-    fclose($kernel_file);
+    $kernel = file_get_contents("/proc/sys/kernel/osrelease");
 
     /* Music */
     $music = shell_exec("rsmpc current");
@@ -86,9 +82,7 @@ Yb,  88      `8bYb, `88       88 Yb,  88      `8b IP'`Yb             I8         
     $shell = getenv("SHELL");
 
     /* Uptime */
-    $uptime_file = fopen("/proc/uptime", "r");
-    $uptime_pre = fread($uptime_file, 21);
-    fclose($uptime_file);
+    $uptime_pre = file_get_contents("/proc/uptime");
     $uptime_array = explode(".", $uptime_pre);
     $uptime = $uptime_array[0];
     
