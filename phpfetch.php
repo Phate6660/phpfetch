@@ -74,9 +74,9 @@ Yb,  88      `8bYb, `88       88 Yb,  88      `8b IP'`Yb             I8         
     /* Music */
     $music = shell_exec("rsmpc current");
     
-    /* Package count*/
-    $pkg_list = shell_exec("pkg -l");
-    $pkgs = substr_count($pkg_list, "\n");
+    /* Package count */
+    $pkg_list = array_filter(glob("/var/db/pkg/*/*/"), "is_dir");
+    $pkgs = count($pkg_list, 0);
     
     /* Shell */
     $shell = getenv("SHELL");

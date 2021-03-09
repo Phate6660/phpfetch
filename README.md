@@ -2,7 +2,7 @@
 An info fetch tool written in PHP. Because why not. /shrug
 
 ## Running
-- Install PHP and (optionally) <a href="https://github.com/Phate6660/pkg">Phate6660/pkg</a> for the portage package count.
+- Install PHP
 - Clone the repo:
   + `git clone https://github.com/Phate6660/phpfetch && cd phpfetch`
 - Run the PHP server:
@@ -17,7 +17,7 @@ An info fetch tool written in PHP. Because why not. /shrug
 - Support more package counts:
   + dnf
   + dpkg
-  + portage (pure PHP)
+  + ~~portage (pure PHP)~~
   + rpm
   + xbps
   + zypper
