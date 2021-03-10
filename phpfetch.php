@@ -66,7 +66,7 @@ Yb,  88      `8bYb, `88       88 Yb,  88      `8b IP'`Yb             I8         
     $editor = getenv("EDITOR");
     
     /* Hostname */
-    $hostname = file_get_contents("/etc/hostname", "r");
+    $hostname = file_get_contents("/etc/hostname");
     
     /* Kernel */
     $kernel = file_get_contents("/proc/sys/kernel/osrelease");
