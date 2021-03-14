@@ -45,6 +45,9 @@ Yb,  88      `8bYb, `88       88 Yb,  88      `8b IP'`Yb             I8         
   </pre>
   <!-- This PHP block will gather information and assemble it all into an array called `output`. -->
   <?php
+    /* Browser */
+    $browser = get_browser(null, true);
+
     /* CPU */
     $cpu_file = fopen("/proc/cpuinfo", "r");
     error_reporting (E_ALL ^ E_NOTICE);
@@ -115,6 +118,7 @@ Yb,  88      `8bYb, `88       88 Yb,  88      `8b IP'`Yb             I8         
     
     /* Asseble output into an array*/
     $output = array(
+                array("title"=>"Browser", "Info"=>"$browser[parent]"),
                 array("title"=>"CPU", "Info"=>"$cpu"),
                 array("title"=>"Distro", "Info"=>"$distro"),
                 array("title"=>"Editor", "Info"=>"$editor"),
